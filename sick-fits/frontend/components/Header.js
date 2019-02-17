@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from './Nav';
 import Link from 'next/link';
 import styled from 'styled-components';
+import Nav from './Nav';
 
 const Logo = styled.h1`
   font-size: 4rem;
@@ -15,7 +15,7 @@ const Logo = styled.h1`
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-  };
+  }
   @media (max-width: 1300px) {
     margin: 0;
     text-align: center;
@@ -54,9 +54,7 @@ const Header = () => (
     <div className="sub-bar">
       <p>Search</p>
     </div>
-    <div>
-      Cart
-    </div>
+    <div>Cart</div>
   </StyledHeader>
 )
 
