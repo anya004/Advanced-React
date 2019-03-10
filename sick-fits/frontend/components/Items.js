@@ -37,6 +37,7 @@ class Items extends React.Component {
             <p>Items!</p>
             <Pagination page={this.props.page}></Pagination>
             <Query query={ALL_ITEMS_QUERY} 
+                //fetchPolicy="network-only"
                 variables={{
                     skip: this.props.page * perPage - perPage,
                     //first: perPage, defaults to perPage in the gql query
