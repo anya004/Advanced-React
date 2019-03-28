@@ -81,6 +81,11 @@ const Mutations = {
         //5. return the user
         return user;
       },
+      signout(parent, args, ctx, info) {
+        //1. Check if there is a user with that email
+        ctx.response.clearCookie('token');
+        return { message: 'Goodbye!' };
+      },
 };
 
 module.exports = Mutations;
