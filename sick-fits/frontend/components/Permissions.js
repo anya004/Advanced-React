@@ -78,7 +78,6 @@ class UserPermissions extends React.Component {
             //updatedPermissions.splice(index,1);
             updatedPermissions = updatedPermissions.filter(permission => permission !== checkbox.value);
         }
-        console.log(updatedPermissions);
         this.setState({ permissions: updatedPermissions });
         
     };
@@ -92,6 +91,7 @@ class UserPermissions extends React.Component {
                     <td key={permission}>
                         <label htmlFor={`${user.id}-permission-${permission}`}>
                             <input 
+                                id={`${user.id}-permission-${permission}`}
                                 type="checkbox"
                                 checked={this.state.permissions.includes(permission)}
                                 value={permission}
