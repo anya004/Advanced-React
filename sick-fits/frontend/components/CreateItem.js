@@ -59,7 +59,7 @@ class CreateItem extends React.Component {
             largeImage: file.eager[0].secure_url
         });
     };
-
+    
     render() {
         return (
             <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>

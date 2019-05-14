@@ -34,7 +34,7 @@ const ItemsList = styled.div`
 class Items extends React.Component {
     render() { 
         return (<Center>
-            <p>Items!</p>
+            <p>Bestsellers</p>
             <Pagination page={this.props.page}></Pagination>
             <Query query={ALL_ITEMS_QUERY} 
                 //fetchPolicy="network-only"
