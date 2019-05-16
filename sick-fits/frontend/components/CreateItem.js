@@ -42,7 +42,6 @@ class CreateItem extends React.Component {
     };
 
     uploadFile = async e => {
-        console.log("uplaoding file");
         const files = e.target.files;
         const data = new FormData();
         data.append('file', files[0]);
@@ -53,7 +52,6 @@ class CreateItem extends React.Component {
             body: data
             });
         const file = await res.json();
-        console.log(file);
         this.setState({
             image: file.secure_url,
             largeImage: file.eager[0].secure_url
@@ -74,7 +72,6 @@ class CreateItem extends React.Component {
                         pathname: '/item',
                         query: { id: res.data.createItem.id }
                     })
-                    console.log(res);
                 }}>
                     <Error error={error} />
                     <fieldset disabled={loading} aria-busy={loading}>

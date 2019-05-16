@@ -30,7 +30,6 @@ const SINGLE_ORDER_QUERY = gql`
   }
 `;
 
-//createdAt = 2019-05-14T02:30:10.216Z
 class Order extends React.Component {
     static propTypes = {
       id: PropTypes.string.isRequired,

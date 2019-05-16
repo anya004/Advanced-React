@@ -16,7 +16,6 @@ class DeleteItem extends React.Component {
         //manually update the cache on the client so it matches the server
         //1. Read the cache for the items
         const data = cache.readQuery({ query: ALL_ITEMS_QUERY});
-        console.log(data);
         //2. filter out the deleted items
         data.items = data.items.filter(item => item.id !== payload.data.deleteItem.id);
         //3. put the items back

@@ -36,7 +36,6 @@ class AutoComplete extends React.Component {
         loading: false,
     };
     onChange = debounce(async (e, client) => {
-        console.log('Searching...');
         // turn loading on
         this.setState({ loading: true });
         // Manually query apollo client
